@@ -1,5 +1,6 @@
 require 'gilded_rose/normal_item'
 require 'gilded_rose/legendary_item'
+require 'gilded_rose/aged_cheese'
 
 class GildedRose
   class ItemFactory
@@ -7,6 +8,8 @@ class GildedRose
       case item.name
       when 'Sulfuras, Hand of Ragnaros'
         GildedRose::LegendaryItem.new(item)
+      when 'Aged Brie'
+        GildedRose::AgedCheese.new(item)
       else
         GildedRose::NormalItem.new(item)
       end
