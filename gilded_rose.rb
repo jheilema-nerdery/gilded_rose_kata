@@ -6,12 +6,8 @@ require 'gilded_rose/conjured_item'
 
 def update_quality(items)
   items.each do |item|
-    fetch(item).update_quality
+    GildedRose::Item.calculator_for(item).update_quality
   end
-end
-
-def fetch(item)
-  GildedRose::Item.calculator_for(item)
 end
 
 # DO NOT CHANGE THINGS BELOW -----------------------------------------

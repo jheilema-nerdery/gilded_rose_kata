@@ -30,8 +30,8 @@ class GildedRose
 
     def set_quality
       item.quality += increment
-      item.quality = [min_quality, item.quality].max
-      item.quality = [max_quality, item.quality].min
+      item.quality = min_quality if item.quality < min_quality
+      item.quality = max_quality if item.quality > max_quality
     end
 
     def sell_in_increment
