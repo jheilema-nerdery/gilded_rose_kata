@@ -1,5 +1,6 @@
 class GildedRose
-  class BackstagePass < NormalItem
+  class BackstagePass < Item
+    register_item 'Backstage passes to a TAFKAL80ETC concert'
 
     private
 

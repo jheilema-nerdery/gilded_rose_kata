@@ -1,5 +1,6 @@
 class GildedRose
-  class LegendaryItem < NormalItem
+  class LegendaryItem < Item
+    register_item 'Sulfuras, Hand of Ragnaros'
 
     private
 

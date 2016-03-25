@@ -1,5 +1,14 @@
 class GildedRose
-  class NormalItem
+  class Item
+
+    def self.register_item name
+      item_types[name] = self
+    end
+
+    def self.calculator_for item
+      (item_types[item.name] || self).new(item)
+    end
+
     def initialize(item)
       @item = item
     end
@@ -10,6 +19,10 @@ class GildedRose
     end
 
     private
+
+    def self.item_types
+      @@item_types ||= {}
+    end
 
     def set_sell_in
       item.sell_in += sell_in_increment

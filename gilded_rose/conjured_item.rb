@@ -1,5 +1,6 @@
 class GildedRose
-  class ConjuredItem < NormalItem
+  class ConjuredItem < Item
+    register_item 'Conjured Mana Cake'
 
     private
 

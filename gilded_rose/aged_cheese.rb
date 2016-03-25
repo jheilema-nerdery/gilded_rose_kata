@@ -1,5 +1,6 @@
 class GildedRose
-  class AgedCheese < NormalItem
+  class AgedCheese < Item
+    register_item 'Aged Brie'
 
     private
 
