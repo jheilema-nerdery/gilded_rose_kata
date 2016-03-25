@@ -5,14 +5,21 @@ class GildedRose
     end
 
     def update_quality
-      item.sell_in += sell_in_increment
+      set_sell_in
+      set_quality
+    end
 
+    private
+
+    def set_sell_in
+      item.sell_in += sell_in_increment
+    end
+
+    def set_quality
       item.quality += increment
       item.quality = [min_quality, item.quality].max
       item.quality = [max_quality, item.quality].min
     end
-
-    private
 
     def sell_in_increment
       -1
