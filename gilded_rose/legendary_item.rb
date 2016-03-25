@@ -1,10 +1,15 @@
 class GildedRose
   class LegendaryItem < NormalItem
-    def update_quality
-      # silence is golden
-    end
 
     private
+
+    def increment
+      0
+    end
+
+    def sell_in_increment
+      0
+    end
 
     def max_quality
       80

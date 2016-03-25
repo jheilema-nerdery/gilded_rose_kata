@@ -1,23 +1,16 @@
 class GildedRose
   class BackstagePass < NormalItem
 
-    def update_quality
-      item.quality += increment
-      item.quality = [item.quality, max_quality].min
-
-      item.sell_in -= 1
-
-      if item.sell_in < 0
-        item.quality = min_quality
-      end
-    end
-
     private
 
     def increment
-      return 3 if item.sell_in < 6
-      return 2 if item.sell_in < 11
+      return 3 if item.sell_in < 5
+      return 2 if item.sell_in < 10
       1
+    end
+
+    def max_quality
+      item.sell_in < 0 ? 0 : 50
     end
 
   end
