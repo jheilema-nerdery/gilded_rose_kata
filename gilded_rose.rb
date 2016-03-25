@@ -1,5 +1,4 @@
 require 'gilded_rose/item_factory'
-require 'gilded_rose/normal_item'
 
 def update_quality(items)
   items.each do |item|
