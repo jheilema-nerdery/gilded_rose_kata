@@ -1,10 +1,10 @@
 class GildedRose
-  class AgedCheese < NormalItem
+  class ConjuredItem < NormalItem
 
     private
 
     def increment
-      item.sell_in < 0 ? 2 : 1
+      item.sell_in < 0 ? -4 : -2
     end
 
   end
